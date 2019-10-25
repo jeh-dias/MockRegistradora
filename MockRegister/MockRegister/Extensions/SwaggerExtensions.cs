@@ -9,8 +9,15 @@ using System.Threading.Tasks;
 
 namespace MockRegister.Middleware
 {
+    /// <summary>
+    /// Classe responsável pela configuração e adição do swagger no projeto
+    /// </summary>
     public static  class SwaggerExtensions
     {
+        /// <summary>
+        /// Método responsável por configurar arquivos e descrições
+        /// </summary>
+        /// <param name="services"></param>
         public static void SwaggerServices(this IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
@@ -36,6 +43,10 @@ namespace MockRegister.Middleware
             });
         }
 
+        /// <summary>
+        /// Método responsável por configurar página e ui do swagger
+        /// </summary>
+        /// <param name="app"></param>
         public static void SwaggerApplication(this IApplicationBuilder app)
         {
             app.UseSwagger();

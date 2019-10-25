@@ -11,6 +11,7 @@ namespace MockRegister.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    
     public class MockRegisterController : ControllerBase
     {
 

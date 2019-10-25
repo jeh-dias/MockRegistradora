@@ -12,5 +12,22 @@
             <param name="register"></param>
             <returns></returns>
         </member>
+        <member name="T:MockRegister.Middleware.SwaggerExtensions">
+            <summary>
+            Classe responsável pela configuração e adição do swagger no projeto
+            </summary>
+        </member>
+        <member name="M:MockRegister.Middleware.SwaggerExtensions.SwaggerServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Método responsável por configurar arquivos e descrições
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:MockRegister.Middleware.SwaggerExtensions.SwaggerApplication(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Método responsável por configurar página e ui do swagger
+            </summary>
+            <param name="app"></param>
+        </member>
     </members>
 </doc>
