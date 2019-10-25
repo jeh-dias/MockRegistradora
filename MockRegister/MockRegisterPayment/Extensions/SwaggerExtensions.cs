@@ -24,7 +24,7 @@ namespace MockRegisterPayment.Extensions
                         Description = "Mock REgister",
                         Contact = new Contact
                         {
-                            Name = "Mock REgister",
+                            Name = "Mock Register Payments",
                         }
                     });
 
@@ -43,7 +43,7 @@ namespace MockRegisterPayment.Extensions
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                    "Ecommerce Do Not Know");
+                    "Mock Register Payments");
 
                 c.RoutePrefix = "docs";
             });
