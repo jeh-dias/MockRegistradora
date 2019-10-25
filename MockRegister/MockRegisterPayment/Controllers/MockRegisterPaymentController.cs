@@ -3,21 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using MockRegister.Domain.Entity;
 
-namespace MockRegister.Controllers
+namespace MockRegisterPayment.Controllers
 {
+    [Route("api/[controller]")]
     [ApiController]
-    [Route("[controller]")]
-    
-    public class MockRegisterController : ControllerBase
+    public class MockRegisterPaymentController : ControllerBase
     {
+        private readonly ILogger<MockRegisterPaymentController> _logger;
 
-        private readonly ILogger<MockRegisterController> _logger;
-
-        public MockRegisterController(ILogger<MockRegisterController> logger)
+        public MockRegisterPaymentController(ILogger<MockRegisterPaymentController> logger)
         {
             _logger = logger;
         }
@@ -34,10 +31,10 @@ namespace MockRegister.Controllers
             try
             {
                 if (register == null)
-                    return NotFound("Requested object is null");
+                    return BadRequest("Requested object is null");
 
                 if (!ModelState.IsValid)
-                    return NotFound(ModelState);
+                    return BadRequest(ModelState);
 
                 return Ok();
             }

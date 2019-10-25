@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MockRegisterPayment</name>
+    </assembly>
+    <members>
+        <member name="M:MockRegisterPayment.Controllers.MockRegisterPaymentController.GetPaymentMethodValid(MockRegister.Domain.Entity.Register)">
+            <summary>
+            Método responsável por receber e validar o tipo de pagamento 
+            e o valor
+            </summary>
+            <param name="register"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
